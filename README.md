@@ -1,12 +1,24 @@
 # es6-lib-seed
 
+## 如何增加库文件
 
+## 如何增加一个方法
 
-[![Travis build status](http://img.shields.io/travis//es6-lib-seed.svg?style=flat)](https://travis-ci.org//es6-lib-seed)
-[![Code Climate](https://codeclimate.com/github//es6-lib-seed/badges/gpa.svg)](https://codeclimate.com/github//es6-lib-seed)
-[![Test Coverage](https://codeclimate.com/github//es6-lib-seed/badges/coverage.svg)](https://codeclimate.com/github//es6-lib-seed)
-[![Dependency Status](https://david-dm.org//es6-lib-seed.svg)](https://david-dm.org//es6-lib-seed)
-[![devDependency Status](https://david-dm.org//es6-lib-seed/dev-status.svg)](https://david-dm.org//es6-lib-seed#info=devDependencies)
+## 如何运行单元测试
+
+- Node
+
+```
+npm run test
+```
+
+- Browser
+
+```
+npm run test-browser
+```
+
+然后把`test/runner.html`直接拖到浏览器打开即可
 
 ## TODO
 

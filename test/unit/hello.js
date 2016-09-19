@@ -10,14 +10,21 @@ describe('hello', () => {
 
     it('No Arguments', () => {
       hello.sayHi();
-      expect(hello.sayHi).to.have.always.returned('hello ');
+      expect(hello.sayHi).to.have.returned(sinon.match(value => value.trim() === 'Hello'));
     });
 
-    it('Provide a name parameter', () => {
+    it('Provide a valid name parameter', () => {
       hello.sayHi('daniel');
-      expect(hello.sayHi).to.have.always.returned('hello daniel');
+      expect(hello.sayHi).to.have.returned('Hello daniel');
     });
-    // 尽量覆盖所有测试用例
+
+    it('Provate a invalid type name parameter', () => {
+      try {
+        hello.sayHi(1);
+      } catch(e) {}
+      expect(hello.sayHi).to.have.thrown('Error'); // 这里是错误的类型，比如new Error()就是Error，new TypeError()就是TypeError
+    })
+    // 尽量覆盖所有入参测试用例 - 参数无值情况，参数有效情况，参数无效情况
 
   });
 

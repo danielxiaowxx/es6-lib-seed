@@ -155,7 +155,7 @@ function testBrowser() {
       devtool: 'inline-source-map'
     }, null, () => {
       if (firstBuild) {
-        $.livereload.listen({port: 35729, host: 'localhost', start: true});
+        $.livereload.listen({port: 35729, host: 'localhost', basePath: '.', start: true});
         gulp.watch(watchFiles, ['lint']);
       } else {
         $.livereload.reload('./tmp/__spec-build.js');
